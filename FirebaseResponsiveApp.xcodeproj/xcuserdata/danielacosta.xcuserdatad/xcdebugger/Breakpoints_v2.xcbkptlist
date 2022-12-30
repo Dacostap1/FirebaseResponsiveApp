@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "401F59D1-840C-467E-AD12-34A952587CA8"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD26E685-D9DD-44E5-977B-9B36C8473DDD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FirebaseResponsiveApp/View/Home.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "Home"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "AD26E685-D9DD-44E5-977B-9B36C8473DDD - c5a4af79014d1d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FirebaseResponsiveApp.Home.init() -&gt; FirebaseResponsiveApp.Home"
+                  moduleName = "FirebaseResponsiveApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielacosta/Documents/Projects/IOS/FirebaseResponsiveApp/FirebaseResponsiveApp/View/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "AD26E685-D9DD-44E5-977B-9B36C8473DDD - 346af45e235cc652"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FirebaseResponsiveApp.Home.init(loginState: SwiftUI.EnvironmentObject&lt;FirebaseResponsiveApp.FirebaseAuthViewModel&gt;) -&gt; FirebaseResponsiveApp.Home"
+                  moduleName = "FirebaseResponsiveApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielacosta/Documents/Projects/IOS/FirebaseResponsiveApp/FirebaseResponsiveApp/View/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
