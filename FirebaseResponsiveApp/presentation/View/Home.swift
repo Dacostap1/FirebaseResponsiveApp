@@ -50,6 +50,14 @@ struct Home: View {
                             }
                         }
                         .padding().padding(.top, 50)
+                        
+                        
+                        Text("Menu")
+                            .font(.title)
+                            .foregroundColor(.white)
+                            .multilineTextAlignment(.trailing)
+                            .frame(width: .infinity, alignment: .trailing)
+                            
                         VStack(alignment: .trailing){
                             ButtonComponent(index: $index, showMenu: $showMenu, title: "PlayStation")
                             ButtonComponent(index: $index, showMenu: $showMenu, title: "Xbox")

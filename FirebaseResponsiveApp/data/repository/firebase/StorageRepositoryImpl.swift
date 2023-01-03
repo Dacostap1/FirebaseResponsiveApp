@@ -14,13 +14,13 @@ class StorageRepositoryImpl : StorageRepository{
         do{
             let storage = Storage.storage().reference()
             let nombrePortada = UUID()
-            let directorio = storage.child("imagenes/\(nombrePortada)")
+            let directorio = storage.child("images/\(nombrePortada)")
             let metadata = StorageMetadata()
             metadata.contentType = "image/png"
             
-            try await directorio.putDataAsync(image, metadata: metadata)
-            return String (describing: directorio)
-        
+            let res = try await directorio.putDataAsync(image, metadata: metadata)
+            let url = try await directorio.downloadURL() //  String (describing: directorio)
+            return url.absoluteString
         }catch{
             print(error.localizedDescription)
             throw NSError()

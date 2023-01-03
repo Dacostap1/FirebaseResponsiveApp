@@ -32,7 +32,7 @@ struct ListView: View {
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 20), count: getColumns()), spacing: 20) {
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 20), count: getColumns()), spacing: 5) {
                 ForEach(firestoreCrud.gamesList, id: \.id){item in
                     CardComponent(firestoreViewModel: firestoreCrud, game: item, platform: platform)
                         .onTapGesture {
@@ -46,7 +46,7 @@ struct ListView: View {
         }.onAppear{
             print("test")
             Task{ //Cuando desaparece la vista se cancela la tarea
-                await firestoreCrud.getData(platform: platform)
+                await firestoreCrud.getGames(platform: platform)
             }
           
         }

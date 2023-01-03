@@ -11,6 +11,7 @@ import FirebaseAuth
 import FirebaseStorage
 
 
+@MainActor
 class FirestoreCrudViewModel: ObservableObject {
     @Published var gamesList = [GameModel]()
     
@@ -20,12 +21,11 @@ class FirestoreCrudViewModel: ObservableObject {
     var db = Firestore.firestore()
     
 
-    @MainActor
-    func getData(platform: String)async {
+    func getGames(platform: String) async {
         gamesList =  try! await gameRepository.getGames(platform: platform)
     }
     
-    @MainActor
+
     func saveAsync(titulo: String, desc: String, platform: String, portada: Data) async throws{
         
         do{
@@ -72,7 +72,6 @@ class FirestoreCrudViewModel: ObservableObject {
         }
     }
     
-    @MainActor
     func update(titulo: String, desc: String, portada: Data?, game: GameModel, platform: String) async throws {
         
         do {
@@ -102,7 +101,6 @@ class FirestoreCrudViewModel: ObservableObject {
     }
     
 
-    @MainActor
     func delete(game: GameModel, platform: String) async throws{
         do{
             try await gameRepository.delete(game: game, platform: platform)

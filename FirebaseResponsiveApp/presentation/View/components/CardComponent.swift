@@ -17,13 +17,24 @@ struct CardComponent: View {
     var body: some View {
         VStack(spacing: 20){
             //FALTA APRENDER A USARLO
-//            AsyncImage(url: URL(string: game.portada)) { image in
-//                image.resizable()
-//            } placeholder: {
-//                Color.red
-//            }
+            AsyncImage(url: URL(string: game.portada)) { image in
+                image
+                    .resizable()
+                          .aspectRatio(contentMode: .fill)
+                          .frame(width: 300, height: 200, alignment: .topLeading)
+                          .cornerRadius(20)
+                          .clipped()
+                
+            } placeholder: {
+                Image(systemName: "photo.fill")
+                    .resizable()
+                          .aspectRatio(contentMode: .fill)
+                          .frame(width: 300, height: 200, alignment: .center)
+                          .cornerRadius(20)
+                          .clipped()
+            }
 
-           ImageFirebase(imageUrl: game.portada)
+//           ImageFirebase(imageUrl: game.portada)
             Text(game.titulo)
                 .font(.subheadline)
                 .bold()
